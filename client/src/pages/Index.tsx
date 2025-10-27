@@ -1,0 +1,135 @@
+import { useEffect, useRef, useState } from 'react';
+
+import Navigation from '@/components/Navigation';
+import HeroSection from '@/components/HeroSection';
+import MusicConsentPopup from '@/components/MusicConsentPopup';
+// Cover images and video from attached assets
+import cover3Image from '@assets/cover3_1761403348868.JPG';
+import StorySection from '@/components/StorySection';
+import ScrollTriggeredTimeline from '@/components/ScrollTriggeredTimeline';
+import VenueSection from '@/components/VenueSection';
+import DressCodeSection from '@/components/DressCodeSection';
+import HashtagGiftsSection from '@/components/HashtagGiftsSection';
+import EntourageSection from '@/components/EntourageSection';
+import RSVPSection from '@/components/RSVPSection';
+import MemorableMomentsSection from '@/components/MemorableMomentsSection';
+import FAQSection from '@/components/FAQSection';
+import Footer from '@/components/Footer';
+import CoverSection from '@/components/CoverSection';
+import InvitationRevealSection from '@/components/InvitationRevealSection';
+import MusicControl from '@/components/MusicControl';
+import { AnimationContext } from '@/contexts/AnimationContext';
+
+const Index = () => {
+  const audioRef = useRef<HTMLAudioElement>(null);
+  const [showMusicConsent, setShowMusicConsent] = useState(true);
+  const [animationsEnabled, setAnimationsEnabled] = useState(false);
+
+  // Handle music consent
+  const handleMusicConsent = async (consent: boolean) => {
+    setShowMusicConsent(false);
+    setAnimationsEnabled(true);
+    if (consent && audioRef.current) {
+      try {
+        await audioRef.current.play();
+      } catch (error) {
+        console.error('Music play failed:', error);
+      }
+    }
+  };
+
+  // Ensure audio is properly initialized
+  useEffect(() => {
+    if (audioRef.current) {
+      const audio = audioRef.current;
+      audio.volume = 0.5;
+      audio.loop = true;
+
+      // Handle audio loading
+      const handleCanPlay = () => {
+        console.log('Audio is ready to play');
+      };
+
+      const handleError = (e: Event) => {
+        console.error('Audio loading error:', e);
+      };
+
+      const handleLoadedData = () => {
+        console.log('Audio data loaded successfully');
+      };
+
+      audio.addEventListener('canplay', handleCanPlay);
+      audio.addEventListener('error', handleError);
+      audio.addEventListener('loadeddata', handleLoadedData);
+
+      return () => {
+        audio.removeEventListener('canplay', handleCanPlay);
+        audio.removeEventListener('error', handleError);
+        audio.removeEventListener('loadeddata', handleLoadedData);
+      };
+    }
+  }, []);
+
+  return (
+    <AnimationContext.Provider value={{ animationsEnabled }}>
+      {/* Background Music - Always present */}
+      <audio
+        ref={audioRef}
+        loop
+        preload="auto"
+        crossOrigin="anonymous"
+        style={{ display: 'none' }}
+        data-testid="background-audio"
+      >
+        <source
+          src="https://res.cloudinary.com/db3limorz/video/upload/v1761450636/ytmp3free.cc_adie-tahanan-lyrics-youtubemp3free.org_vzfd0a.mp3"
+          type="audio/mpeg"
+        />
+        Your browser does not support the audio element.
+      </audio>
+
+      <div className="min-h-screen relative">
+        <Navigation />
+
+        {/* Music Consent Popup */}
+        <MusicConsentPopup 
+          onConsent={handleMusicConsent} 
+          isVisible={showMusicConsent}
+        />
+
+        {/* Main Content Sections */}
+        <main className="relative z-10">
+          <HeroSection />
+          <InvitationRevealSection />
+          <StorySection />
+          <CoverSection
+            imageUrl="https://res.cloudinary.com/db3limorz/video/upload/v1761568053/VICTEL9989small_sbtkiu.mp4"
+            alt="Jay & Lianne Wedding Cover Video 1"
+          />
+          <ScrollTriggeredTimeline />
+          <VenueSection />
+          <CoverSection
+            imageUrl="https://res.cloudinary.com/db3limorz/video/upload/v1761568050/VICTEL9977small_tihybn.mp4"
+            alt="Jay & Lianne Wedding Cover Video 2"
+          />
+          <DressCodeSection />
+          <HashtagGiftsSection />
+          <RSVPSection />
+          <MemorableMomentsSection />
+          <EntourageSection />
+          <CoverSection
+            imageUrl={cover3Image}
+            alt="Jay & Lianne Wedding Cover Image 3"
+          />
+          <FAQSection />
+          <Footer />
+        </main>
+
+        {/* Music Control - always show */}
+        <MusicControl audioRef={audioRef} />
+      </div>
+    </AnimationContext.Provider>
+  );
+};
+
+export default Index;

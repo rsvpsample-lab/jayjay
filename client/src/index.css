@@ -1,0 +1,653 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Modern Elegant Design System - Dark Green & Gold */
+
+@layer base {
+  :root {
+    /* 70-20-10 Color Rule: Elegant Dark Green & Gold Theme */
+    
+    /* 70% PRIMARY - Dark Green Background */
+    --background: 140 40% 8%; /* Deep dark green background */
+    --foreground: 45 90% 85%; /* Light gold text */
+
+    /* Card Colors - Primary Palette */
+    --card: 140 35% 12%; /* Rich dark green cards */
+    --card-foreground: 45 90% 85%; /* Light gold text on cards */
+
+    /* Popover Colors - Primary Palette */
+    --popover: 140 35% 10%; /* Deep dark green popover */
+    --popover-foreground: 45 90% 85%; /* Light gold text */
+
+    /* Brand Color */
+    --brand: 45 95% 55%; /* Bright gold - Main brand color */
+    
+    /* 20% SECONDARY - Dark Green (Supporting) */
+    --primary: 140 50% 20%; /* Deep forest green primary */
+    --primary-foreground: 45 100% 90%; /* Bright gold text */
+
+    /* Secondary Colors - Supporting Palette */
+    --secondary: 140 45% 25%; /* Medium dark green secondary */
+    --secondary-foreground: 45 95% 85%; /* Gold text */
+
+    /* Muted Colors - Supporting Palette */
+    --muted: 140 30% 15%; /* Muted dark green */
+    --muted-foreground: 45 60% 70%; /* Muted gold text */
+
+    /* 10% ACCENT - Gold Accent (Standout Elements & CTAs) */
+    --accent: 45 95% 55%; /* Bright gold accent */
+    --accent-foreground: 140 50% 10%; /* Dark green text on gold */
+
+    /* Gold/Special Accent - for CTAs and highlights */
+    --gold: 45 95% 55%; /* Bright gold for buttons */
+    --gold-foreground: 140 50% 10%; /* Dark green text on gold */
+    
+    /* Bright Gold - for emphasis */
+    --gold-bright: 45 100% 65%; /* Brighter gold */
+
+    /* Natural Earth Palette - Gold & warm accents */
+    --rose-gold: 30 80% 60%; /* Rose gold accent */
+    --rose-gold-dark: 30 70% 50%; /* Darker rose gold */
+    --amber-glow: 40 90% 55%; /* Amber gold glow */
+    --warm-light: 35 85% 65%; /* Warm golden light */
+
+    /* Natural Accents Palette - Gold variations */
+    --city-blue: 45 85% 50%; /* Gold accent */
+    --city-cyan: 40 90% 55%; /* Amber gold */
+    --city-amber: 35 95% 60%; /* Light amber */
+    --city-purple: 50 80% 55%; /* Greenish gold */
+
+    /* Destructive */
+    --destructive: 0 65% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Borders & Inputs */
+    --border: 45 60% 30%; /* Gold border */
+    --input: 140 30% 15%; /* Dark green input */
+    --ring: 45 95% 55%; /* Gold accent ring */
+
+    /* Border Radius */
+    --radius: 0.75rem;
+
+    /* Dark Green & Gold Gradients */
+    --gradient-elegant: linear-gradient(135deg, hsl(140, 40%, 8%), hsl(140, 35%, 12%));
+    --gradient-gold: linear-gradient(135deg, hsl(45, 95%, 55%), hsl(45, 100%, 65%));
+    --gradient-night: linear-gradient(180deg, hsl(140, 40%, 8%) 0%, hsl(140, 35%, 12%) 100%);
+    --gradient-bokeh: radial-gradient(ellipse at center, hsl(45, 95%, 55%) 0%, transparent 60%);
+
+    /* Elegant Gold Shadows */
+    --shadow-elegant: 0 20px 50px -10px rgba(212, 175, 55, 0.25);
+    --shadow-soft: 0 10px 30px -5px rgba(212, 175, 55, 0.15);
+    --shadow-warm: 0 15px 40px -8px rgba(212, 175, 55, 0.2);
+    --shadow-glow: 0 0 30px rgba(212, 175, 55, 0.3);
+
+    /* Elegant Typography Scale */
+    --font-display: 'Boska', 'Cormorant Garamond', serif; /* Headers - Boska 700 */
+    --font-script: 'Boska', 'Cormorant Garamond', serif; /* Sub-headers - Boska 500 */
+    --font-times: 'Times New Roman', Times, serif;
+    --font-body: 'Satoshi', 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif; /* Body text */
+
+    /* Smooth Transitions */
+    --transition-elegant: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 140 35% 12%;
+    --sidebar-foreground: 45 90% 85%;
+    --sidebar-primary: 45 95% 55%;
+    --sidebar-primary-foreground: 140 50% 10%;
+    --sidebar-accent: 45 100% 65%;
+    --sidebar-accent-foreground: 140 50% 10%;
+    --sidebar-border: 45 60% 30%;
+    --sidebar-ring: 45 95% 55%;
+  }
+
+  .dark {
+    /* 70-20-10 Color Rule: Elegant Dark Green & Gold Theme */
+    
+    /* 70% PRIMARY - Dark Green Background */
+    --background: 140 40% 8%; /* Deep dark green background */
+    --foreground: 45 90% 85%; /* Light gold text */
+
+    /* Card Colors - Primary Palette */
+    --card: 140 35% 12%; /* Rich dark green cards */
+    --card-foreground: 45 90% 85%; /* Light gold text on cards */
+
+    /* Popover Colors - Primary Palette */
+    --popover: 140 35% 10%; /* Deep dark green popover */
+    --popover-foreground: 45 90% 85%; /* Light gold text */
+
+    /* Brand Color */
+    --brand: 45 95% 55%; /* Bright gold - Main brand color */
+    
+    /* 20% SECONDARY - Dark Green (Supporting) */
+    --primary: 140 50% 20%; /* Deep forest green primary */
+    --primary-foreground: 45 100% 90%; /* Bright gold text */
+
+    /* Secondary Colors - Supporting Palette */
+    --secondary: 140 45% 25%; /* Medium dark green secondary */
+    --secondary-foreground: 45 95% 85%; /* Gold text */
+
+    /* Muted Colors - Supporting Palette */
+    --muted: 140 30% 15%; /* Muted dark green */
+    --muted-foreground: 45 60% 70%; /* Muted gold text */
+
+    /* 10% ACCENT - Gold Accent (Standout Elements & CTAs) */
+    --accent: 45 95% 55%; /* Bright gold accent */
+    --accent-foreground: 140 50% 10%; /* Dark green text on gold */
+
+    /* Gold/Special Accent - for CTAs and highlights */
+    --gold: 45 95% 55%; /* Bright gold for buttons */
+    --gold-foreground: 140 50% 10%; /* Dark green text on gold */
+    
+    /* Bright Gold - for emphasis */
+    --gold-bright: 45 100% 65%; /* Brighter gold */
+
+    /* Natural Earth Palette - Gold & warm accents */
+    --rose-gold: 30 80% 60%; /* Rose gold accent */
+    --rose-gold-dark: 30 70% 50%; /* Darker rose gold */
+    --amber-glow: 40 90% 55%; /* Amber gold glow */
+    --warm-light: 35 85% 65%; /* Warm golden light */
+
+    /* Natural Accents Palette - Gold variations */
+    --city-blue: 45 85% 50%; /* Gold accent */
+    --city-cyan: 40 90% 55%; /* Amber gold */
+    --city-amber: 35 95% 60%; /* Light amber */
+    --city-purple: 50 80% 55%; /* Greenish gold */
+
+    /* Destructive */
+    --destructive: 0 65% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Borders & Inputs */
+    --border: 45 60% 30%; /* Gold border */
+    --input: 140 30% 15%; /* Dark green input */
+    --ring: 45 95% 55%; /* Gold accent ring */
+
+    --sidebar-background: 140 35% 12%;
+    --sidebar-foreground: 45 90% 85%;
+    --sidebar-primary: 45 95% 55%;
+    --sidebar-primary-foreground: 140 50% 10%;
+    --sidebar-accent: 45 100% 65%;
+    --sidebar-accent-foreground: 140 50% 10%;
+    --sidebar-border: 45 60% 30%;
+    --sidebar-ring: 45 95% 55%;
+  }
+
+  /* Custom Wedding Animations */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInScale {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes underlineGold {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  @keyframes parallaxFloat {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes goldGlow {
+    0%, 100% {
+      box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+    }
+    50% {
+      box-shadow: 0 0 40px rgba(212, 175, 55, 0.5);
+    }
+  }
+
+  @keyframes bokehFloat {
+    0%, 100% {
+      transform: translate(0, 0) scale(1);
+      opacity: 0.6;
+    }
+    50% {
+      transform: translate(10px, -10px) scale(1.1);
+      opacity: 0.8;
+    }
+  }
+}
+
+/* Responsive clip-path variables for story images */
+@media (min-width: 768px) {
+  :root {
+    --clip-path-1: url(#clipPath-1);
+    --clip-path-2: url(#clipPath-2);
+    --clip-path-3: url(#clipPath-3);
+    --clip-path-4: url(#clipPath-4);
+    --clip-path-5: url(#clipPath-5);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    outline: none !important;
+  }
+
+  html {
+    @apply bg-background;
+  }
+
+  body {
+    @apply text-foreground font-body;
+    font-family: var(--font-body);
+    background-color: hsl(140, 40%, 8%);
+    position: relative;
+    min-height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=600&auto=format&fit=crop&q=60') center/cover no-repeat;
+    opacity: 0.03;
+    z-index: 0;
+  }
+
+  body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 40%;
+    background: linear-gradient(180deg, rgba(212, 175, 55, 0.15) 0%, transparent 100%);
+    opacity: 0.4;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+
+
+  .font-display {
+    font-family: var(--font-display);
+    font-weight: 700;
+  }
+
+  .font-body {
+    font-family: var(--font-body);
+  }
+
+  .font-script {
+    font-family: var(--font-script);
+    font-weight: 500;
+  }
+
+  .font-times {
+    font-family: var(--font-times);
+  }
+
+  /* Mobile-First Responsive Typography */
+  .text-hero {
+    @apply text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-display font-light tracking-tight;
+    line-height: 0.9;
+    letter-spacing: 0.15em;
+  }
+
+  .text-hero-script {
+    @apply text-3xl sm:text-4xl lg:text-5xl font-script font-normal italic;
+    line-height: 1.2;
+  }
+
+  .text-subtitle {
+    @apply text-lg sm:text-xl lg:text-2xl font-body font-light tracking-wider;
+    letter-spacing: 0.05em;
+  }
+
+  .text-section-title {
+    @apply text-2xl sm:text-3xl lg:text-4xl font-display font-semibold tracking-tight;
+  }
+
+  .text-elegant-body {
+    @apply text-base sm:text-lg leading-relaxed font-body;
+  }
+
+  /* Animation Classes */
+  .animate-fade-up {
+    animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+
+  .animate-fade-scale {
+    animation: fadeInScale 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+
+  .animate-float {
+    animation: parallaxFloat 6s ease-in-out infinite;
+  }
+
+  .animate-gold-glow {
+    animation: goldGlow 3s ease-in-out infinite;
+  }
+
+  .animate-bokeh {
+    animation: bokehFloat 8s ease-in-out infinite;
+  }
+
+  /* Elegant Hover Effects */
+  .hover-elegant {
+    @apply transition-all duration-500 hover:scale-105;
+  }
+
+  .hover-glow {
+    @apply transition-all duration-500;
+  }
+
+  .hover-glow:hover {
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.4);
+  }
+
+  .gold-underline {
+    @apply relative;
+  }
+
+  .gold-underline::after {
+    content: '';
+    @apply absolute bottom-0 left-0 h-0.5;
+    background-color: hsl(45, 95%, 55%);
+    width: 0;
+    transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .gold-underline.active::after {
+    width: 100%;
+  }
+
+  /* Overlay for background gradients */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at top left, rgba(0,0,0,0.05), transparent 60%),
+                radial-gradient(circle at bottom right, rgba(0,0,0,0.05), transparent 60%);
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  main {
+    position: relative;
+    z-index: 2;
+  }
+
+  #root {
+    position: relative;
+    z-index: 2;
+  }
+
+  /* Glass Morphism Effect */
+  .glass-effect {
+    background: rgba(20, 40, 25, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+  }
+
+  /* Clean Mobile Styles */
+  @media (max-width: 768px) {
+    .hover-glow:hover {
+      box-shadow: none;
+    }
+
+    /* Enhanced Mobile Layout Improvements */
+    section {
+      padding-left: 1rem !important;
+      padding-right: 1rem !important;
+    }
+
+    .max-w-4xl, .max-w-3xl, .max-w-2xl {
+      max-width: 100% !important;
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+
+    /* Countdown section mobile improvements */
+    .grid-cols-4 {
+      gap: 0.5rem !important;
+    }
+
+    /* Card padding adjustments */
+    .p-8 {
+      padding: 1rem !important;
+    }
+
+    .p-6 {
+      padding: 0.75rem !important;
+    }
+
+    /* Image sizing for mobile */
+    .w-64 {
+      width: 12rem !important;
+    }
+
+    .h-64 {
+      height: 12rem !important;
+    }
+
+    /* Typography adjustments */
+    .text-4xl {
+      font-size: 2rem !important;
+    }
+
+    .text-5xl {
+      font-size: 2.5rem !important;
+    }
+
+    .text-6xl {
+      font-size: 3rem !important;
+    }
+
+    /* Hero section specific mobile fixes - moved to component */
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-background;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba(212, 175, 55, 0.4);
+    @apply rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(212, 175, 55, 0.6);
+  }
+
+  /* Remove any unwanted borders */
+  section {
+    border: none !important;
+    outline: none !important;
+  }
+
+  /* Restore proper border-radius for UI elements that need it */
+  .rounded-lg {
+    border-radius: 0.5rem !important;
+  }
+
+  .rounded-xl {
+    border-radius: 0.75rem !important;
+  }
+
+  .rounded-2xl {
+    border-radius: 1rem !important;
+  }
+
+  /* Accessible focus styles for night theme */
+  *:focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+  }
+
+  /* Modern Gold Button with Glow */
+  .shadow__btn {
+    padding: 10px 20px;
+    border: none;
+    font-size: 17px;
+    color: hsl(var(--gold-foreground));
+    border-radius: 7px;
+    letter-spacing: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.5s;
+    transition-property: box-shadow;
+    background: hsl(var(--gold));
+    box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
+  }
+
+  .shadow__btn:hover {
+    box-shadow: 0 0 5px hsl(var(--gold)),
+                0 0 25px hsl(var(--gold)),
+                0 0 50px hsl(var(--gold)),
+                0 0 100px hsl(var(--gold));
+  }
+
+  /* Image Loop Animation Styles */
+  .image-loop-section {
+    position: relative;
+  }
+
+  .image-loop-container {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .image-loop-track {
+    display: flex;
+    animation: imageLoop 20s linear infinite;
+    width: fit-content;
+  }
+
+  .image-loop-track-static {
+    display: flex;
+    width: fit-content;
+  }
+
+  .image-loop-item {
+    flex-shrink: 0;
+    margin-right: 2rem;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  }
+
+  .image-loop-img {
+    height: 100%;
+    width: auto;
+    display: block;
+    object-fit: contain;
+    transition: transform 0.5s ease;
+  }
+
+  .image-loop-item:hover .image-loop-img {
+    transform: scale(1.05);
+  }
+
+  @keyframes imageLoop {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  /* Pause animation on hover for better UX */
+  .image-loop-track:hover {
+    animation-play-state: paused;
+  }
+
+  /* Alternating Section Backgrounds - Dark Green & Gold Theme */
+  .section-pastel-blue {
+    background-color: hsl(140, 40%, 8%);
+    color: hsl(45, 90%, 85%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .section-pastel-blue > * {
+    position: relative;
+    z-index: 2;
+  }
+
+  .section-hard-blue {
+    background: linear-gradient(135deg, hsl(140, 40%, 8%), hsl(140, 35%, 12%));
+    color: hsl(45, 90%, 85%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .section-hard-blue > * {
+    position: relative;
+    z-index: 2;
+  }
+
+  /* Mobile responsive adjustments */
+  @media (max-width: 768px) {
+    .image-loop-item {
+      height: 300px;
+      margin-right: 1rem;
+    }
+
+    .image-loop-track {
+      animation-duration: 7.5s;
+    }
+  }
+}
+
+/* Location Guide Button - Clean Text Link */
+.location-guide-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: inline;
+  color: hsl(var(--primary));
+  text-decoration: underline;
+  transition: var(--transition-smooth);
+}
+
+.location-guide-btn:hover {
+  color: hsl(var(--primary)) !important;
+  opacity: 0.8;
+}
