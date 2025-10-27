@@ -1,7 +1,6 @@
 import { TypeAnimation } from 'react-type-animation';
 import { useState } from 'react';
 import { useAnimationContext } from '@/contexts/AnimationContext';
-import heroImage from '@assets/hero-section_1761404726433.JPG';
 
 const HeroSection = () => {
   const [showElements, setShowElements] = useState(false);
@@ -11,12 +10,16 @@ const HeroSection = () => {
     <section 
       className="hero-section relative min-h-screen flex flex-col items-center justify-center overflow-hidden"
     >
-      {/* Image Background */}
-      <img
-        src={heroImage}
-        alt="Wedding couple"
+      {/* Video Background */}
+      <video
+        src="https://res.cloudinary.com/db3limorz/video/upload/v1761568053/VICTEL9989small_sbtkiu.mp4"
+        autoPlay
+        muted
+        loop
+        playsInline
         className="absolute inset-0 w-full h-full object-cover"
         style={{ objectPosition: 'center' }}
+        data-testid="hero-video"
       />
       {/* Dark green gradient overlay matching site theme */}
       <div className="absolute inset-0 bg-gradient-to-b from-[hsl(140,40%,8%)]/70 via-[hsl(140,35%,12%)]/60 to-[hsl(140,40%,8%)]/80"></div>
