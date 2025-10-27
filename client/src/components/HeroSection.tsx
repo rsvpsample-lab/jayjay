@@ -21,8 +21,6 @@ const HeroSection = () => {
         style={{ objectPosition: 'center' }}
         data-testid="hero-video"
       />
-      {/* Dark green gradient overlay matching site theme */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[hsl(140,40%,8%)]/70 via-[hsl(140,35%,12%)]/60 to-[hsl(140,40%,8%)]/80"></div>
 
       {/* Content */}
       <div className="relative z-10 text-left px-8 sm:px-12 lg:px-16 max-w-7xl w-full">
