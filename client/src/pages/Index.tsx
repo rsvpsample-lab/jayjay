@@ -4,6 +4,8 @@ import Navigation from '@/components/Navigation';
 import HeroSection from '@/components/HeroSection';
 import MusicConsentPopup from '@/components/MusicConsentPopup';
 // Cover images and video from attached assets
+import cover1Image from '@assets/cover1_1761573126830.JPG';
+import cover2Image from '@assets/cover2_1761573126830.JPG';
 import cover3Image from '@assets/cover3_1761403348868.JPG';
 import StorySection from '@/components/StorySection';
 import ScrollTriggeredTimeline from '@/components/ScrollTriggeredTimeline';
@@ -103,14 +105,14 @@ const Index = () => {
           <InvitationRevealSection />
           <StorySection />
           <CoverSection
-            imageUrl="https://res.cloudinary.com/db3limorz/video/upload/v1761568053/VICTEL9989small_sbtkiu.mp4"
-            alt="Jay & Lianne Wedding Cover Video 1"
+            imageUrl={cover1Image}
+            alt="Jay & Lianne Wedding Cover Image 1"
           />
           <ScrollTriggeredTimeline />
           <VenueSection />
           <CoverSection
-            imageUrl="https://res.cloudinary.com/db3limorz/video/upload/v1761568050/VICTEL9977small_tihybn.mp4"
-            alt="Jay & Lianne Wedding Cover Video 2"
+            imageUrl={cover2Image}
+            alt="Jay & Lianne Wedding Cover Image 2"
           />
           <DressCodeSection />
           <HashtagGiftsSection />
