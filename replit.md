@@ -83,7 +83,7 @@ Successfully migrated from Lovable to Replit environment:
   - Updated dress code to formal attire requirements with no cocktail dresses or cream/white colors
   - Changed gift message to new wording about monetary gifts for their future
   - Completely rewrote FAQ section with new questions about unplugged ceremony, arrival times, plus-one policy
-  - Updated contact information to 0926 002 9824 and paranelmer@gmail.com
+  - Updated contact information to 0926 002 9824 and rsvpsample@gmail.com
   - Changed wedding hashtag to #SeaYouAtTheAisle
   - Updated countdown timer to use correct September 7, 2025 date
   - Updated HTML title and meta description for new couple
