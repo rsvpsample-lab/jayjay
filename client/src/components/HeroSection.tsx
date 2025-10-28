@@ -1,11 +1,20 @@
 import { TypeAnimation } from 'react-type-animation';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useAnimationContext } from '@/contexts/AnimationContext';
 import { ChevronDown } from 'lucide-react';
 
 const HeroSection = () => {
   const [showElements, setShowElements] = useState(false);
+  const [showScrollIndicator, setShowScrollIndicator] = useState(false);
   const { animationsEnabled } = useAnimationContext();
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowScrollIndicator(true);
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <section 
@@ -77,7 +86,10 @@ const HeroSection = () => {
       </div>
 
       {/* Scroll Down Indicator */}
-      <div className="absolute bottom-8 left-0 right-0 z-20 flex flex-col items-center gap-2 animate-bounce" data-testid="scroll-indicator">
+      <div 
+        className={`absolute bottom-8 left-0 right-0 z-20 flex flex-col items-center gap-2 animate-bounce transition-opacity duration-1000 ${showScrollIndicator ? 'opacity-100' : 'opacity-0'}`}
+        data-testid="scroll-indicator"
+      >
         <span className="text-sm font-bold tracking-widest" style={{ fontFamily: 'Boska, serif', color: '#FFD700', textShadow: '0 0 10px rgba(255, 215, 0, 0.8), 2px 2px 8px rgba(0,0,0,0.9)' }}>
           SCROLL DOWN
         </span>
