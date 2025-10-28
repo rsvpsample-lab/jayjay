@@ -11,7 +11,7 @@ const HeroSection = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowScrollIndicator(true);
-    }, 10000);
+    }, 15000);
 
     return () => clearTimeout(timer);
   }, []);
