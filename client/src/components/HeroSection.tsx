@@ -1,6 +1,7 @@
 import { TypeAnimation } from 'react-type-animation';
 import { useState } from 'react';
 import { useAnimationContext } from '@/contexts/AnimationContext';
+import { ChevronDown } from 'lucide-react';
 
 const HeroSection = () => {
   const [showElements, setShowElements] = useState(false);
@@ -73,6 +74,14 @@ const HeroSection = () => {
             </p>
           </div>
         </div>
+      </div>
+
+      {/* Scroll Down Indicator */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex flex-col items-center gap-2 animate-bounce" data-testid="scroll-indicator">
+        <span className="text-white text-sm font-light tracking-widest" style={{ fontFamily: 'Boska, serif', textShadow: '2px 2px 8px rgba(0,0,0,0.7)' }}>
+          SCROLL DOWN
+        </span>
+        <ChevronDown className="text-white w-6 h-6" style={{ filter: 'drop-shadow(2px 2px 8px rgba(0,0,0,0.7))' }} />
       </div>
 
       {/* Improved mobile responsiveness */}
