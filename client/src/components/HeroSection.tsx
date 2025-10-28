@@ -77,7 +77,7 @@ const HeroSection = () => {
       </div>
 
       {/* Scroll Down Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex flex-col items-center gap-2 animate-bounce" data-testid="scroll-indicator">
+      <div className="absolute bottom-8 left-0 right-0 z-20 flex flex-col items-center gap-2 animate-bounce" data-testid="scroll-indicator">
         <span className="text-white text-sm font-light tracking-widest" style={{ fontFamily: 'Boska, serif', textShadow: '2px 2px 8px rgba(0,0,0,0.7)' }}>
           SCROLL DOWN
         </span>
