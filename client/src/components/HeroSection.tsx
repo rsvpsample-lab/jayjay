@@ -78,10 +78,10 @@ const HeroSection = () => {
 
       {/* Scroll Down Indicator */}
       <div className="absolute bottom-8 left-0 right-0 z-20 flex flex-col items-center gap-2 animate-bounce" data-testid="scroll-indicator">
-        <span className="text-white text-sm font-light tracking-widest" style={{ fontFamily: 'Boska, serif', textShadow: '2px 2px 8px rgba(0,0,0,0.7)' }}>
+        <span className="text-sm font-bold tracking-widest" style={{ fontFamily: 'Boska, serif', color: '#FFD700', textShadow: '0 0 10px rgba(255, 215, 0, 0.8), 2px 2px 8px rgba(0,0,0,0.9)' }}>
           SCROLL DOWN
         </span>
-        <ChevronDown className="text-white w-6 h-6" style={{ filter: 'drop-shadow(2px 2px 8px rgba(0,0,0,0.7))' }} />
+        <ChevronDown className="w-6 h-6" style={{ color: '#FFD700', filter: 'drop-shadow(0 0 8px rgba(255, 215, 0, 0.8)) drop-shadow(2px 2px 8px rgba(0,0,0,0.9))' }} />
       </div>
 
       {/* Improved mobile responsiveness */}
