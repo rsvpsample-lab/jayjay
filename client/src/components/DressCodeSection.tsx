@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 
 import guestsImage from "@assets/Gemini_Generated_Image_kvvldkkvvldkkvvl_1761406540773.png";
-import principalSponsorsImage from "@assets/Gemini_Generated_Image_hv706rhv706rhv70_1761406298629.png";
+import principalSponsorsImage from "@assets/a0f94f73-22c7-422c-9081-75081070ae76 (1)_1763626042885.png";
 
 const DressCodeSection = () => {
   return (
@@ -65,8 +65,9 @@ const DressCodeSection = () => {
                 />
                 <div className="mt-6 space-y-3">
                   <p className="text-sm text-foreground/80 font-semibold">Gentlemen: Black or suits with motif inspired accents</p>
-                  <p className="text-sm text-foreground/80 font-semibold">Ladies: Beige, Gold, or Champagne gowns</p>
+                  <p className="text-sm text-foreground/80 font-semibold">Ladies: Emerald Green, Beige, Gold, or Champagne gowns</p>
                   <div className="flex justify-center gap-3 mt-4">
+                    <div className="w-12 h-12 rounded-full border-2 border-border shadow-md" style={{ backgroundColor: '#50C878' }} title="Emerald Green"></div>
                     <div className="w-12 h-12 rounded-full border-2 border-border shadow-md" style={{ backgroundColor: '#F5F5DC' }} title="Beige"></div>
                     <div className="w-12 h-12 rounded-full border-2 border-border shadow-md" style={{ backgroundColor: '#FFD700' }} title="Gold"></div>
                     <div className="w-12 h-12 rounded-full border-2 border-border shadow-md" style={{ backgroundColor: '#F7E7CE' }} title="Champagne"></div>
