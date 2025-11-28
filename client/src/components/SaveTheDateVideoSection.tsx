@@ -17,7 +17,6 @@ const SaveTheDateVideoSection = () => {
         <div className="absolute top-0 left-0 w-96 h-96 border border-primary/30 rounded-full transform -translate-x-1/3 -translate-y-1/3"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 border border-primary/30 rounded-full transform translate-x-1/3 translate-y-1/3"></div>
       </div>
-
       <div className="max-w-4xl mx-auto relative z-10">
         {/* Section Header */}
         <motion.div 
@@ -26,9 +25,7 @@ const SaveTheDateVideoSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={animationsEnabled ? { duration: 0.8, ease: "easeOut", delay: 9.8 } : { duration: 0 }}
         >
-          <h2 className="text-5xl font-script italic font-black text-gold mb-4" data-testid="text-save-the-date-title">
-            Save the Date
-          </h2>
+          <h2 className="text-5xl font-script italic font-black text-gold mb-4" data-testid="text-save-the-date-title">Save the Date Video</h2>
           <p className="text-xl text-foreground/80">A special message from us to you</p>
         </motion.div>
 
