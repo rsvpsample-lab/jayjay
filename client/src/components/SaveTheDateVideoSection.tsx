@@ -48,18 +48,6 @@ const SaveTheDateVideoSection = () => {
             </div>
           </div>
         </motion.div>
-
-        {/* Message */}
-        <motion.div 
-          className="text-center"
-          initial={animationsEnabled ? { opacity: 0, y: 30 } : { opacity: 1, y: 0 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={animationsEnabled ? { duration: 0.8, ease: "easeOut", delay: 10.4 } : { duration: 0 }}
-        >
-          <p className="text-lg text-foreground/90 leading-relaxed max-w-2xl mx-auto">
-            We can't wait to share our special day with you. More details coming soon!
-          </p>
-        </motion.div>
       </div>
     </motion.section>
   );
