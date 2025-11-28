@@ -13,6 +13,7 @@ import VenueSection from '@/components/VenueSection';
 import DressCodeSection from '@/components/DressCodeSection';
 import HashtagGiftsSection from '@/components/HashtagGiftsSection';
 import EntourageSection from '@/components/EntourageSection';
+import SaveTheDateVideoSection from '@/components/SaveTheDateVideoSection';
 import RSVPSection from '@/components/RSVPSection';
 import MemorableMomentsSection from '@/components/MemorableMomentsSection';
 import FAQSection from '@/components/FAQSection';
@@ -116,6 +117,7 @@ const Index = () => {
           />
           <DressCodeSection />
           <HashtagGiftsSection />
+          <SaveTheDateVideoSection />
           <RSVPSection />
           <MemorableMomentsSection />
           <EntourageSection />
