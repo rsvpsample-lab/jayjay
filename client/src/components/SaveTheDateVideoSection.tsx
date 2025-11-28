@@ -26,7 +26,6 @@ const SaveTheDateVideoSection = () => {
           transition={animationsEnabled ? { duration: 0.8, ease: "easeOut", delay: 9.8 } : { duration: 0 }}
         >
           <h2 className="text-5xl font-script italic font-black text-gold mb-4" data-testid="text-save-the-date-title">Save the Date Video</h2>
-          <p className="text-xl text-foreground/80">A special message from us to you</p>
         </motion.div>
 
         {/* Video Container */}
